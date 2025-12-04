@@ -1,0 +1,604 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 7 oct 2025, 18:03:21
+    Author     : frank
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+/* ----- CONTENIDO PRINCIPAL ----- */
+main, .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#grid {
+    padding-bottom: 40px;
+}
+
+h3, h4, h5, h6 {
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.navbar {
+    background-color: #b30000;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: #ffe6e6 !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   FORMULARIOS / INPUTS
+   ============================== */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #b30000;
+    box-shadow: 0 0 5px rgba(179, 0, 0, 0.3);
+}
+
+/* ==============================
+   BOTONES PERSONALIZADOS
+   ============================== */
+.btn-agregar {
+    background-color: #b30000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #d80000;
+    transform: scale(1.03);
+}
+
+.btn-nicsy {
+    background-color: #b30000;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-nicsy:hover {
+    background-color: #d80000;
+}
+
+/* ==============================
+   TARJETAS DE PRODUCTO
+   ============================== */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ==============================
+   TEXTOS
+   ============================== */
+.text-muted {
+    color: #888 !important;
+}
+
+.text-secondary {
+    color: #555 !important;
+}
+
+/* ==============================
+   PIE DE PÁGINA
+   ============================== */
+.footer-fijo {
+    background-color: #b30000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* ==============================
+   ANIMACIONES
+   ============================== */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==============================
+   CARRUSEL INDEX 
+   ============================== */
+.index-carousel {
+    width: 92%;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen */
+.index-carousel img {
+    height: 480px;
+    object-fit: contain;
+    background: #f4f4f4;
+}
+
+/* Controles (fijos y centrados verticalmente) */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #b30000;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 70%;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #d80000;
+}
+
+/* Texto del carrusel */
+.carousel-caption {
+    position: absolute;
+    bottom: 45px;
+    left: auto;
+    right: 40px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    padding: 18px 22px;
+    max-width: 320px;
+    color: #fff;
+    z-index: 50;
+    pointer-events: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-caption h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    margin-bottom: 6px;
+}
+
+.carousel-caption p {
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.carousel-caption .btn-nicsy {
+    background: linear-gradient(90deg, #b30000 0%, #d80000 100%);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.carousel-caption .btn-nicsy:hover {
+    background: linear-gradient(90deg, #8a0000 0%, #b30000 100%);
+    transform: scale(1.05);
+}
+
+/* --- Ajuste en pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .carousel-caption {
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        max-width: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.1rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Pequeño efecto zoom --- */
+.carousel-item.active img {
+    transform: scale(1.03);
+    transition: transform 1.5s ease-in-out;
+}
+/* =======================================================
+   PANEL ADMIN / PANEL CAJERO - BOTICA NICSY
+   ======================================================= */
+
+/* === SIDEBAR LATERAL === */
+.sidebar {
+    background-color: #b30000;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.sidebar h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Enlaces del menú lateral */
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 6px 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #d80000;
+    padding-left: 16px;
+}
+
+/* Botón cerrar sesión */
+.sidebar .btn-outline-light {
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sidebar .btn-outline-light:hover {
+    background-color: #fff;
+    color: #b30000;
+    transform: scale(1.03);
+}
+
+/* === CONTENIDO PRINCIPAL === */
+.content {
+    margin-left: 260px;
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    transition: margin-left 0.3s ease;
+}
+
+.welcome {
+    font-weight: 500;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* === TARJETAS DE FUNCIÓN === */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card i {
+    color: #b30000;
+    transition: transform 0.3s ease;
+}
+
+.card:hover i {
+    transform: scale(1.15);
+}
+
+/* === ADAPTABILIDAD MÓVIL === */
+@media (max-width: 992px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 6px 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar .btn-outline-light {
+        display: none; /* Se puede mostrar en menú desplegable si se desea */
+    }
+}
+/* --- VARIANTE PANEL CAJERO --- */
+.sidebar-cajero {
+    background-color: #0d6efd;
+}
+
+.sidebar-cajero a:hover {
+    background-color: #0a58ca;
+}
+/* =======================================================
+   LOGIN CON IMAGEN - BOTICA NICSY
+   ======================================================= */
+
+.body-login {
+    background: linear-gradient(135deg, #b30000, #8a0000);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 850px;
+    width: 100%;
+}
+
+.img-login {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-title {
+    color: #b30000;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: #b30000;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #d80000;
+    transform: scale(1.03);
+}
+
+.alerta {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.footer-login {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+/* --- Adaptación móvil --- */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 380px;
+    }
+}
+/* =======================================================
+   BOTÓN VOLVER AL INICIO - LOGIN
+   ======================================================= */
+.btn-volver {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-volver:hover {
+    background-color: #b30000;
+    color: #fff;
+    transform: scale(1.03);
+}
+/* =======================================================
+   SECCIÓN ADMINISTRADOR (Panel Productos, Lotes, Alertas)
+   ======================================================= */
+
+/* === ENCABEZADOS Y BOTONES === */
+.content h3 {
+    color: #b30000;
+    font-weight: 700;
+}
+
+.btn-danger, .btn-nicsy {
+    background-color: #b30000 !important;
+    border-color: #b30000 !important;
+}
+
+.btn-danger:hover, .btn-nicsy:hover {
+    background-color: #d80000 !important;
+    border-color: #d80000 !important;
+}
+
+/* === TABLAS === */
+.table thead {
+    background-color: #b30000;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #fceaea !important;
+}
+
+/* === ALERTAS DE PRODUCTOS === */
+.alert-card {
+    border-left: 5px solid #b30000;
+    background: #fff7f7;
+    border-radius: 8px;
+    padding: 15px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alert-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* === MODALES === */
+.modal-header.bg-danger {
+    background-color: #b30000 !important;
+    color: #fff !important;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* === INPUTS EN MODALES === */
+.modal-body .form-control,
+.modal-body .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+    border-color: #b30000;
+    box-shadow: 0 0 5px rgba(179, 0, 0, 0.3);
+}
+
+/* === CARDS DE ALERTAS === */
+.card.border-danger {
+    border: 1px solid #ffcccc !important;
+    background: #fffaf9;
+}
+
+.card.border-danger .card-body h6 {
+    color: #b30000;
+    font-weight: 700;
+}
+
+/* === ICONOS LATERALES === */
+.sidebar i {
+    margin-right: 6px;
+}
+
+/* === ENLACES ACTIVOS === */
+.sidebar a.active {
+    background-color: #d80000;
+    font-weight: 600;
+}
+
+/* === AJUSTE VISUAL GENERAL === */
+main, .content {
+    background-color: #f8f9fa;
+}
+
+.text-danger {
+    color: #b30000 !important;
+}
